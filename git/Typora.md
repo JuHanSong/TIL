@@ -31,7 +31,7 @@
 - 코드블록 : Ctrl + Shift + K
 
   ```
-  printf("hello world"); // 코드블럭 테스트
+  printf("hello world"); // 코드블럭 테스트.
   ```
 
 * 코드 : ''  구문을 감싸기
