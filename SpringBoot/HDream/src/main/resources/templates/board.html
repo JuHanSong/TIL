@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous"></link>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- 리스트 : 부트스트랩은 모바일 우선이라 화면이 작으면 아래로 쌓아서 내려온다 -->
+    <ul class="navbar-nav navbar-dark">
+        <li class="nav-item active">
+            <a class="nav-link" onclick="userManagerBtnClick()">회원관리</a></li>
+        <li class="nav-item">
+            <a class="nav-link" onclick="userBoardBtnClick">게시판관리</a></li>
+        <li class="nav-item">
+            <a class="nav-link disabled" onclick="userNotice()">공지사항</a></li>
+    </ul>
+</nav>
+<script type="text/javascript">
+    function userManagerBtnClick() {
+        location.href = "goUserManager";
+    }
+</script>
+<script type="text/javascript">
+    function userBoardBtnClick(){
+        location.href = "goUserBoard";
+    }
+</script>
+<script type="text/javascript">
+    function userNotice(){
+        location.href = "goUserNotice";
+    }
+</script>
+
+
+</body>
+</html>

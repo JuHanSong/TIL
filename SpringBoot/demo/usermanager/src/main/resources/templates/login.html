@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HDream.LoginTemp</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous"></link>
+    <style>
+        .card {
+            left: 0;
+            margin: auto;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 300px;
+            margin-bottom: auto
+        }
+    </style>
+</head>
+<body>
+<script>
+    $(function () {
+        $("btn-Join").on("click", function () {
+            location.href = "joinPage.html";
+        });
+    });
+</script>
+<div class="card align-middle" style="width:20rem; border-radius:20px;">
+    <div class="card-title" style="margin-top:30px;">
+        <h2 class="card-title text-center" style="color:#113366;">Hdream Login</h2>
+    </div>
+    <div class="card-body">
+        <form class="form-signin" method="POST" onSubmit="logincall();return false">
+            <h5 class="form-signin-heading">로그인 정보를 입력하세요</h5>
+            <label for="inputEmail" class="sr-only">Your ID</label>
+            <input type="text" id="uid" class="form-control" placeholder="Your ID" required autofocus><BR>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="upw" class="form-control" placeholder="Password" required><br>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="remember-me"> 기억하기
+                </label>
+            </div>
+            <button id="btn-Login" class="btn btn-login btn-primary btn-block" type="submit">Login</button>
+            <button id="btn-Join" class="btn btn-join btn-primary btn-block" name="btnJoin" onclick="joinBtnClick()">
+                JoinPage
+            </button>
+            <script type="text/javascript">
+                function joinBtnClick() {
+                    location.href = "joinPage.html"
+                }
+            </script>
+
+        </form>
+
+    </div>
+</div>
+</body>
+</html>
