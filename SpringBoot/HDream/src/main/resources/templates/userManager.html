@@ -59,15 +59,36 @@
         <table id = "userInfo" class = "table table-striped" style="text-align:center; border:1px solid #dddddd">
             <thead>
             <tr>
-                <th style = "background-color:#eeeeee; text-align:center;">아이디</th>
-                <th style = "background-color:#eeeeee; text-align:center;">이름</th>
-                <th style = "background-color:#eeeeee; text-align:center;">성별</th>
-                <th style = "background-color:#eeeeee; text-align:center;">생일</th>
-                <th style = "background-color:#eeeeee; text-align:center;">전화번호</th>
-                <th style = "background-color:#eeeeee; text-align:center;">사용유무</th>
+                <th class="UserID" style = "background-color:#eeeeee; text-align:center;">아이디</th>
+                <th class="UserName" style = "background-color:#eeeeee; text-align:center;">이름</th>
+                <th class="UserGender" style = "background-color:#eeeeee; text-align:center;">성별</th>
+                <th class="UserBirth" style = "background-color:#eeeeee; text-align:center;">생일</th>
+                <th class="UserTel" style = "background-color:#eeeeee; text-align:center;">전화번호</th>
+                <th class="UserCondition" style = "background-color:#eeeeee; text-align:center;">사용유무</th>
             </tr>
             </thead>
             <tbody>
+            <!-- CONTENTS !-->
+            <tr th:each="user : ${userList}">
+                <td>
+                    <span th:text="${user.userId}"></span>
+                </td>
+                <td>
+                    <span th:text="${user.userName}"></span>
+                </td>
+                <td>
+                    <span th:text="${user.userGender}"></span>
+                </td>
+                <td>
+                    <span th:text="${user.userBirth}"></span>
+                </td>
+                <td>
+                    <span th:text="${user.userTel}"></span>
+                </td>
+                <td>
+                    <span th:text="${user.userCondition}"></span>
+                </td>
+            </tr>
 
         </table>
 
