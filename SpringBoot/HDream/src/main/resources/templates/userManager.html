@@ -46,17 +46,15 @@
                     <input type="radio" name="userCon" value="사용 중">사용중</input>
                     <input type="radio" name="userCon" value="정지">정지</input>
                 </td>
-
             </tr>
             <tr>
-
             </tr>
         </table>
         <button name="btnSerch">검색하기</button>
     </form><br><br>
 
     <div class = "row">
-        <table id = "userInfo" class = "table table-striped" style="text-align:center; border:1px solid #dddddd">
+        <table name = "userInfo" class = "table table-striped" style="text-align:center; border:1px solid #dddddd">
             <thead>
             <tr>
                 <th class="UserID" style = "background-color:#eeeeee; text-align:center;">아이디</th>
@@ -67,33 +65,11 @@
                 <th class="UserCondition" style = "background-color:#eeeeee; text-align:center;">사용유무</th>
             </tr>
             </thead>
-            <tbody>
-            <!-- CONTENTS !-->
-            <tr th:each="user : ${userList}">
-                <td>
-                    <span th:text="${user.userId}"></span>
-                </td>
-                <td>
-                    <span th:text="${user.userName}"></span>
-                </td>
-                <td>
-                    <span th:text="${user.userGender}"></span>
-                </td>
-                <td>
-                    <span th:text="${user.userBirth}"></span>
-                </td>
-                <td>
-                    <span th:text="${user.userTel}"></span>
-                </td>
-                <td>
-                    <span th:text="${user.userCondition}"></span>
-                </td>
-            </tr>
-
+            <tbody id="userData"></tbody>
         </table>
 
         <button id="btn-Serch" class="btn btn-login btn-primary btn-block" onclick="userAllData()">회원조회</button>
-        <button id="btn-Delite" class="btn btn-join btn-primary btn-block" name="btnJoin" onclick="joinBtnClick()">회원탈퇴</button>
+        <button id="btn-Delite" class="btn btn-join btn-primary btn-block" name="btnJoin" onclick="userDelete()">회원탈퇴</button>
         <button id="btn-userModify" class="btn btn-join btn-primary btn-block" name="btnJoin" onclick="joinBtnClick()">정보수정</button>
     </div>
 </div>
@@ -114,22 +90,34 @@
     }
 </script>
 <script type="text/javascript">
-    function userAllData(){
-        var allData = location.href = '/test/serchAllData';
-        var data = {
-            userId : '',
-            userName : '',
-            userGender : '',
-            userBirth : '',
-            userTel : '',
-            userCondition : ''
-        }
+    function userAllData() {
+        location.href = "serchAllData";
 
-        data.userId = Request.g
+        // var my_tbody = document.getElementById('userData');
+        // var row = my_tbody.insertRow(my_tbody.rows.length); //하단에 추가
+        //
+        // var userId = row.insertCell(0);
+        // var userName = row.insertCell(1);
+        // var userGenser = row.insertCell(2);
+        // var userBirth = row.insertCell(3);
+        // var userTell = row.insertCell(4);
+        // var userCondition = row.insertCell(5);
 
-        alert(allData);
+        // userId.innerHTML = "u.getuserId";
+        // userName.innerHTML = 'nameTest';
+        // userGenser.innerHTML = 'GenderTest';
+        // userBirth.innerHTML = 'birthTest';
+        // userTell.innerHTML = 'TellTest';
+        // userCondition.innerHTML = "ConditionTest";
     }
+    // function userDelete() {
+    //     var my_tbody = document.getElementById('userData');
+    //     if (my_tbody.rows.length < 1) return;
+    //     // my_tbody.deleteRow(0); // 상단부터 삭제
+    //     my_tbody.deleteRow( my_tbody.rows.length-1 ); // 하단부터 삭제
+    // }
 </script>
+
 
 
 </body>
