@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hdream JoinPage</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous"></link>
+
+</head>
+<body>
+<div id="wrap">
+        <b><font size="6" color="gray">HDream JoinTemp</font></b>
+        <br><br>
+    <form action="/test/inputTest" method="post">
+        <table>
+            <tr>
+                <td id="classID">아이디 :</td>
+                <td>
+                    <input type="text" name="userId" maxlength="20">
+                </td>
+            </tr>
+
+            <tr>
+                <td id="classPW">비밀번호 :</td>
+                <td>
+                    <input type="userPW" id="userPw" name="userPw" maxlength="15">
+                </td>
+            </tr>
+
+            <tr>
+                <td id="classPWCOM">비밀번호 확인 :</td>
+                <td>
+                    <input type="password" name="userPwcom" maxlength="15">
+                </td>
+            </tr>
+
+            <tr>
+                <td id="className">이름 :</td>
+                <td>
+                    <input type="text" name="userName" maxlength="40">
+                </td>
+            </tr>
+
+            <tr>
+                <td id="classGENDER">성별 :</td>
+                <td>
+                    <input type="radio" name="userGender" value="M" checked>남
+                    <input type="radio" name="userGender" value="W" checked>여
+                </td>
+            </tr>
+
+            <tr>
+                <td id="classBIRTH">생일 :</td>
+                <td>
+                    <input type="text" name="userBirth_yy" maxlength="4" placeholder="년(4자)" size="6">
+                    <select name="userBirth_mm">
+                        <option value="">월</option>
+                        <option value="01">1</option>
+                        <option value="02">2</option>
+                        <option value="03">3</option>
+                        <option value="04">4</option>
+                        <option value="05">5</option>
+                        <option value="06">6</option>
+                        <option value="07">7</option>
+                        <option value="08">8</option>
+                        <option value="09">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                    <select name="userBirth_dd">
+                        <option value="">월</option>
+                        <option value="01">1</option>
+                        <option value="02">2</option>
+                        <option value="03">3</option>
+                        <option value="04">4</option>
+                        <option value="05">5</option>
+                        <option value="06">6</option>
+                        <option value="07">7</option>
+                        <option value="08">8</option>
+                        <option value="09">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="12">13</option>
+                        <option value="12">14</option>
+                        <option value="12">15</option>
+                        <option value="12">16</option>
+                        <option value="12">17</option>
+                        <option value="12">18</option>
+                        <option value="12">19</option>
+                        <option value="12">20</option>
+                        <option value="12">21</option>
+                        <option value="12">22</option>
+                        <option value="12">23</option>
+                        <option value="12">24</option>
+                        <option value="12">25</option>
+                        <option value="12">26</option>
+                        <option value="12">27</option>
+                        <option value="12">28</option>
+                        <option value="12">29</option>
+                        <option value="12">30</option>
+                        <option value="12">31</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td id="classEmailDomain">이메일 :</td>
+                <td>
+                    <input type="text" name="userEmail" maxlength="30"> @
+                    <select name="userEmailDomain">
+                        <option>naver.com</option>
+                        <option>daum.net</option>
+                        <option>gmail.com</option>
+                        <option>nate.com</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td id="classTel">휴대전화 :</td>
+                <td>
+                    <select name="userTel_1st">
+                        <option value="010">010</option>
+                        <option value="011">011</option>
+                        <option value="012">012</option>
+                        <option value="013">013</option>
+                    </select>
+                    <input type="text" name="userTel_2nd" placeholder="4자리" size="4"> -
+                    <input type="text" name="userTel_3rd" placeholder="4자리" size="4">
+                </td>
+            </tr>
+            <tr>
+                <td id="classAddress">주소 :</td>
+                <td>
+                    <input type="text" size="50" name="userAddress"/>
+                </td>
+            </tr>
+        </table>
+        <input type = submit value = 전송>
+    </form>
+        <br>
+        <button id="btn-Join" class="btn btn-join btn-primary btn-block" name="btnJoin" onclick="joinBtnClick()">LoginPage
+        </button>
+
+
+        <script type="text/javascript">
+            function joinBtnClick() {
+                location.href = "/test/"
+            }
+        </script>
+</div>
+
+
+</body>
+</html>
