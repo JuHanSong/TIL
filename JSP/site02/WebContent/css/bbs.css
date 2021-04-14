@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+.left { /* class를 선택하는 경우는 .클래스명 */
+	background: white;
+	color: blue;
+	font-size: 25px;
+	text-align: center;
+	width: 100px;
+}
+
+.top {
+	background: lime;
+	color: blue;
+	font-weight: bold; font-size : 25px;
+	text-align: center;
+	font-size: 25px;
+}
+input{
+	width: 200px;
+	background: pink;
+	color: red;
+	font-size: 25px;
+	text-align: center;
+}
+.right {
+	width: 200px;
+	background: yellow;
+	color: red;
+	font-size: 25px;
+	text-align: center;
+}
+button {
+	color: gray;
+	font-size: 25px;
+}
+td{
+	text-align: center;
+}
+#sub{/* id에서 찾아라. */
+	background: maroon;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" type="text/css" href="css/out.css">
+	</head>
+	<body>
+		<h3>회원가입 화면</h3><!-- header 1~6 -->
+		<hr color="red">
+		<form action="insert.jsp">
+		아이디 : <input name = "id"><br>
+		비밀번호 : <input name = "pw"><br>
+		이름 : <input name = "name"><br>
+		연락처 : <select name = "company">
+		<option value="011">SKT</option>
+		<option value="012" selected="selected">LG</option>
+		<option value="013">APP</option>
+		</select>
+		<input name = "tel"><br>
+		<!-- radio vs checkbox
+		radio = 1개만 선택 checkbox = 여러개 선택
+		 -->
+		성별 : <input type = "radio" name = "gender" value = "man" checked="checked">남
+			  <input type = "radio" name = "gender" value = "woman">여<br>
+		하고싶은 말 : <textarea rows="5" cols="20" name = "word"></textarea><br>
+		취미 : <input type="checkbox" name = "hobby" value = "run">달리기	  
+			  <input type="checkbox" name = "hobby" value = "book">독서	  
+		 	  <input type="checkbox" name = "hobby" value = "food">맛집<br>	  
+		<button>회원가입</button>
+		</form>
+	</body>
+</html>

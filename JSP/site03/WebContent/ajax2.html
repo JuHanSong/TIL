@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src = "js/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+$(function() {
+	$('#b1').click(function() {
+		$.ajax({
+			url : 'test.jsp',
+			data : {
+				test : $('#test').val()
+			},
+			success : function(result) {
+				// funtion(변수) : test.jsp의 실행 결과를 받아와서 변수에 넣어줌.
+				// 변수명은 아무거나 상관없음.
+				alert('test.jsp 연결성공.!!')
+				//alert(result)
+				$('div').html(result)
+			},
+			error : function() {
+				alert('test.jsp 연결실패~!')			
+			}
+		})		
+	})// b1
+	$('#b2').click(function() {
+		$.ajax({
+			url : 'money.jsp',
+			data : {
+				money : $('#money').val(),
+				choice : $('#choice').val()
+			},
+			success : function(result) {
+				alert('money.jsp 연결성공.!!')
+				$('div').html(result)
+			},
+			error : function() {
+				alert('money.jsp 연결실패~!')			
+			}
+		})		
+	})// b2
+	$('#b3').click(function() {
+		$.ajax({
+			url : 'check.jsp',
+			data : {
+				id : $('#id').val()
+			},
+			success : function(result) {
+				alert('check.jsp 연결성공.!!')
+				$('div').html(result)
+			},
+			error : function() {
+				alert('check.jsp 연결실패~!')			
+			}
+		})		
+	})// b3
+	$('#b4').click(function() {
+		$.ajax({//010-9145-3136(입력하는 핸드폰 번호)
+			url : 'tel.jsp',
+			data : {
+				id : $('#tel').val(),
+			},
+			success : function(result) {
+				alert('check.jsp 연결성공.!!')
+				$('div').html('인증번호는' + result)
+			},
+			error : function() {
+				alert('check.jsp 연결실패~!')			
+			}
+		})		
+	})// b4
+})// root
+</script>
+</head>
+<body>
+	ajax테스트 : 
+	<input id = "test">
+	<button id = "b1">Ajax테스트(test.jsp)</button>
+	<hr color="red">
+	<div style="color: red"></div>
+	<hr color="blue">
+	결제금액 : <input id = "money"><br>
+	결제수단 : 1)계좌이체 2)신용카드 3) 휴대폰결제<br> <input id = "choice"><br>
+	<button id = "b2">결제하기(money.jsp)</button>
+	<hr color="red">
+	회원가입할 id 입력 <input id = "id"> <button id="b3">id중복체크(check.jsp)</button><br>
+	<hr color="red">
+	인증받을 전화번호 입력<input id = "tel"><button id = "b4">인증번호 받기(tel.jsp)</button><br>
+	인전받은 숫자입력<input id = num><button id = "b5">인증번호 확인</button><br>
+	<hr color="green">
+	
+	</body>
+</html>

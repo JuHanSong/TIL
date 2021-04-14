@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src = "js/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+//document.ready()=>$()
+	$(function() {
+		//버튼을 선택해서 클릭했을 때
+		$('button').click(function() {
+			day = $('input').val()
+			$('div').html('오늘은 <b><u>' + day +'</u></b>요일이고 날씨는 비가온다.')
+		})
+	}) 
+</script>
+</head>
+<body>
+오늘의 요일은<input><br>
+<button>날씨는?</button>
+<hr>
+<div></div>
+
+</body>
+</html>

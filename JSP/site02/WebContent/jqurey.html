@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#b1').click(function() {
+			today = $('#today').val()
+			
+			if(today == "토" || today == "일"){
+				alert('주말')
+			}else{
+				alert('평일')
+			}
+		})
+	})
+
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+오늘 요일 : <input id = "today">
+<button id ='b1'>주말인지 확인</button>
+</body>
+</html>

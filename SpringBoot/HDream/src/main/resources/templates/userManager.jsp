@@ -1,15 +1,18 @@
+<%@ page import="com.example.demo.DAO.MemberVO" %>
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-
+    <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
           crossorigin="anonymous"></link>
 </head>
 <body>
-
+<%
+    MemberVO vo = new MemberVO();
+%>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <!-- 리스트 : 부트스트랩은 모바일 우선이라 화면이 작으면 아래로 쌓아서 내려온다 -->
     <ul class="navbar-nav navbar-dark">
@@ -64,8 +67,10 @@
                 <th class="UserTel" style = "background-color:#eeeeee; text-align:center;">전화번호</th>
                 <th class="UserCondition" style = "background-color:#eeeeee; text-align:center;">사용유무</th>
             </tr>
+
             </thead>
-            <tbody id="userData"></tbody>
+            <tbody>
+            </tbody>
         </table>
 
         <button id="btn-Serch" class="btn btn-login btn-primary btn-block" onclick="userAllData()">회원조회</button>
@@ -78,47 +83,36 @@
     function userManagerBtnClick() {
         location.href = "goUserManager";
     }
-</script>
-<script type="text/javascript">
     function userBoardBtnClick(){
         location.href = "goUserBoard";
     }
-</script>
-<script type="text/javascript">
     function userNotice(){
         location.href = "goUserNotice";
     }
-</script>
-<script type="text/javascript">
     function userAllData() {
-        location.href = "serchAllData";
+        // location.href = "serchAllData";
+        $(function() {
+            $('btn-Serch').click(function() {
+                $.ajax({
+                    url : "test/serchAllData",
+                    data : {
+                        userId : '<%= vo.getUserId()%>',
+                        UserName : '<%= vo.getUserName()%>',
+                        userGender : '<%= vo.getUserGender()%>',
+                        userBirth : '<%= vo.getUserBirth()%>',
+                        userTel : '<%= vo.getUserTel()%>'
+                    },
+                    success : function() {
+                        alert("연결성공")
+                    }
+                })
+            })
+        })
 
-        // var my_tbody = document.getElementById('userData');
-        // var row = my_tbody.insertRow(my_tbody.rows.length); //하단에 추가
-        //
-        // var userId = row.insertCell(0);
-        // var userName = row.insertCell(1);
-        // var userGenser = row.insertCell(2);
-        // var userBirth = row.insertCell(3);
-        // var userTell = row.insertCell(4);
-        // var userCondition = row.insertCell(5);
-
-        // userId.innerHTML = "u.getuserId";
-        // userName.innerHTML = 'nameTest';
-        // userGenser.innerHTML = 'GenderTest';
-        // userBirth.innerHTML = 'birthTest';
-        // userTell.innerHTML = 'TellTest';
-        // userCondition.innerHTML = "ConditionTest";
     }
-    // function userDelete() {
-    //     var my_tbody = document.getElementById('userData');
-    //     if (my_tbody.rows.length < 1) return;
-    //     // my_tbody.deleteRow(0); // 상단부터 삭제
-    //     my_tbody.deleteRow( my_tbody.rows.length-1 ); // 하단부터 삭제
-    // }
+
+
+
 </script>
-
-
-
 </body>
 </html>

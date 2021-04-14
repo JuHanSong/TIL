@@ -29,10 +29,10 @@ public class MainController {
         return test2;
     }// PsotMapping 은 method Type 필요없이 post 를 전송이 가능.
 
-    @GetMapping(value = "getuser")
-    public List<User> getUser() {
-        return userService.findAllUsers();
-    }
+//    @GetMapping(value = "getuser")
+//    public List<User> getUser() {
+//        return userService.findAllUsers();
+//    }
 
     @GetMapping(value = "serch")
     public List<User> serch(@RequestParam String USER_ID) {

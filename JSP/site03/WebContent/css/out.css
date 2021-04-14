@@ -1,0 +1,47 @@
+@charset "UTF-8";
+a{
+	text-decoration: none;
+}
+body{
+	color: blue;
+}
+li:first-child{
+	background: yellow;
+	border-radius: 70px 0 0 70px;
+}
+li:last-child{
+	border-radius: 0 70px 70px 0;
+}
+li{
+	font-family:"궁서";
+	font-size: 25px;
+}
+li:nth-child(2n){
+	background: limel;
+}
+li:hover{/* li에 마우스를 올렸을 때 스타일 정함. */
+	width: 200px;
+	height: 10px;
+	background: red;
+	list-style: none;
+	float: left;
+	margin-bottom: 10px; /* 바깥쪽 여백 */
+	padding: 20px;
+}
+
+ul li{/* ul안에 있는 태그 중에서 li를 찾아라 */
+	width: 100px;
+	height: 50px;
+	background: orange;
+	list-style: none;
+	float: left;
+	margin-bottom: 10px; /* 바깥쪽 여백 */
+	padding: 20px;
+}
+ol li{
+	width: 100px;
+	height: 50px;
+	background: green;
+	list-style: none;
+	float: left;
+}

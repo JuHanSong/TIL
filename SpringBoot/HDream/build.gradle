@@ -32,6 +32,7 @@ dependencies {
     compile group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.7.0'
     compile('javax.servlet:jstl')
     compile("org.apache.tomcat.embed:tomcat-embed-jasper")
+    compile(group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '9.0.1')
 }
 
 test {

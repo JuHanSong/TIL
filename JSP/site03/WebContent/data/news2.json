@@ -1,0 +1,133 @@
+﻿{
+    "status": "ok",
+    "feed": {
+        "url": "http://rss.hankyung.com/new/news_main.xml",
+        "title": "한국경제 | 한국경제",
+        "link": "https://www.hankyung.com/",
+        "author": "",
+        "description": "한경닷컴 RSS 서비스",
+        "image": "http://img.hankyung.com/img/bi_top_news02.gif"
+    },
+    "items": [
+        {
+            "title": "단독 '삼성 출신' 이해진, 범(凡)삼성가와 손잡다",
+            "pubDate": "2021-03-16 01:02:14",
+            "link": "http://www.hankyung.com/news/app/newsview.php?aid=202103167238i&amp;amp;sid=general&amp;amp;nid=000&amp;rss=r",
+            "guid": "08253d0ec99614879934ec00b7f320da",
+            "author": "",
+            "thumbnail": "",
+            "description": "",
+            "content": "",
+            "enclosure": {},
+            "categories": []
+        },
+        {
+            "title": "온라인으로 넓게, 매거진으로 깊게…'바이오 금맥' 캔다",
+            "pubDate": "2020-10-07 08:29:22",
+            "link": "http://www.hankyung.com/news/app/newsview.php?aid=2020100755341&amp;amp;sid=general&amp;amp;nid=000&amp;rss=r",
+            "guid": "0bb2e18337e75cef099ccb32fbfaf275",
+            "author": "",
+            "thumbnail": "",
+            "description": "",
+            "content": "",
+            "enclosure": {},
+            "categories": []
+        },
+        {
+            "title": "속보 노벨 화학상에 '샤르팡티에·두드나' 공동수상",
+            "pubDate": "2020-10-07 09:51:29",
+            "link": "http://www.hankyung.com/news/app/newsview.php?aid=2020100759197&amp;amp;sid=general&amp;amp;nid=000&amp;rss=r",
+            "guid": "e3da9c3c80dfcc336df5eb97c73e095a",
+            "author": "",
+            "thumbnail": "",
+            "description": "",
+            "content": "",
+            "enclosure": {},
+            "categories": []
+        },
+        {
+            "title": "기업들 잇단 호소에도…들끓는 경제계 \"이런 입법독재 없었다\"",
+            "pubDate": "2020-10-07 08:44:23",
+            "link": "http://www.hankyung.com/news/app/newsview.php?aid=2020100756891&amp;amp;sid=general&amp;amp;nid=000&amp;rss=r",
+            "guid": "176a1550edbaca390b1d24e49400c267",
+            "author": "",
+            "thumbnail": "",
+            "description": "",
+            "content": "",
+            "enclosure": {},
+            "categories": []
+        },
+        {
+            "title": "'흙수저 의원' 양향자·서일준 \"좋은 일자리가 기회의 사다리\"",
+            "pubDate": "2020-10-07 08:55:04",
+            "link": "http://www.hankyung.com/news/app/newsview.php?aid=2020100756861&amp;amp;sid=general&amp;amp;nid=000&amp;rss=r",
+            "guid": "a7b9c239a02beac52be8345506b2fd98",
+            "author": "",
+            "thumbnail": "",
+            "description": "",
+            "content": "",
+            "enclosure": {},
+            "categories": []
+        },
+        {
+            "title": "\"마켓컬리 성공 비결은 속도 아닌 좋은 상품에 대한 집착\"",
+            "pubDate": "2020-10-07 08:39:51",
+            "link": "http://www.hankyung.com/news/app/newsview.php?aid=2020100756321&amp;amp;sid=general&amp;amp;nid=000&amp;rss=r",
+            "guid": "eb5808a4d163d682e2a02188f8aa9ba6",
+            "author": "",
+            "thumbnail": "",
+            "description": "",
+            "content": "",
+            "enclosure": {},
+            "categories": []
+        },
+        {
+            "title": "홍남기 \"주식 대주주 3억 요건…세대별 합산 폐지 검토\"",
+            "pubDate": "2020-10-07 08:49:04",
+            "link": "http://www.hankyung.com/news/app/newsview.php?aid=202010074955i&amp;amp;sid=general&amp;amp;nid=000&amp;rss=r",
+            "guid": "28ed4f13574d47ea953bdc09b53a3a8f",
+            "author": "",
+            "thumbnail": "",
+            "description": "",
+            "content": "",
+            "enclosure": {},
+            "categories": []
+        },
+        {
+            "title": "서욱 \"공무원 실종 첫날 '월북 가능성 없다' 보고 받아\"",
+            "pubDate": "2020-10-07 08:35:47",
+            "link": "http://www.hankyung.com/news/app/newsview.php?aid=2020100755991&amp;amp;sid=general&amp;amp;nid=000&amp;rss=r",
+            "guid": "af2d058b1265014cd207aab13990fbb8",
+            "author": "",
+            "thumbnail": "",
+            "description": "",
+            "content": "",
+            "enclosure": {},
+            "categories": []
+        },
+        {
+            "title": "트럼프 \"부양책, 대선 후로 미뤄라\"…살아나던 美경제에 '찬물'",
+            "pubDate": "2020-10-07 08:35:44",
+            "link": "http://www.hankyung.com/news/app/newsview.php?aid=2020100755771&amp;amp;sid=general&amp;amp;nid=000&amp;rss=r",
+            "guid": "7bdeb802dbf5241fb60f645db29a01c4",
+            "author": "",
+            "thumbnail": "",
+            "description": "",
+            "content": "",
+            "enclosure": {},
+            "categories": []
+        },
+        {
+            "title": "美하원 \"IT 빅4 독과점, 사업 쪼개라\"…기업들 \"위법 없었다\" 반발",
+            "pubDate": "2020-10-07 08:38:11",
+            "link": "http://www.hankyung.com/news/app/newsview.php?aid=2020100756181&amp;amp;sid=general&amp;amp;nid=000&amp;rss=r",
+            "guid": "7346f6521f695965359002edd42970ee",
+            "author": "",
+            "thumbnail": "",
+            "description": "",
+            "content": "",
+            "enclosure": {},
+            "categories": []
+        }
+    ]
+}

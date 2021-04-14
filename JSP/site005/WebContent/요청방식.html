@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>GET방식(단순요청)</h3><!-- 클릭했을 때 단순히 값을 갖고오는경우 
+							http request(브라우저)
+							header : 주소, get 방식 요청 : data(text) : 노출위험-->
+<a href="http://www.naver.com">GoNaver</a>
+<h3>POST방식(글올리기)</h3><!-- body : post방식 요청 : data(text이외)
+							 http response
+							 header : 상태코드(정상 200, 없었어 404, 접근불가 420, 문법에러 500)
+							 body : html 즉 바디를 따라 간다.-->
+<form action="select.jsp">
+	검색할 id : <input name = "id"><br>
+	<input type="submit" value="검색할 id 전송(GET)">
+</form>
+
+<form action="select.jsp" method="post">
+	검색할 id : <input name = "id"><br>
+	<input type="submit" value="검색할 id 전송(PSOT)">
+</form>
+
+</body>
+</html>

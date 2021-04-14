@@ -16,10 +16,11 @@ spring:
   mvc:
     view:
       suffix: .jsp
-
+      prefix: /WEB-INF/views/
 
 
 
 server:
-  port: 9999
+  port: 9998
+
 

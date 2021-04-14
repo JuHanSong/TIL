@@ -9,7 +9,9 @@ import org.springframework.util.CollectionUtils;
 
 import javax.transaction.Transactional;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Log4j2
 @Service
@@ -18,8 +20,25 @@ public class UserService {
     @Autowired
     UserRepository userRepository;
 
-    public List<User> findAllUsers() {
-        return userRepository.findAll();
+    public List<HashMap> serchAllData() {
+        List<HashMap> mapList = new ArrayList<>();
+
+        List<User> list = userRepository.findAll();
+
+        for(User u : list){
+            HashMap<String, String> hashMap = new HashMap<>();
+
+            hashMap.put("userId", u.getUserId());
+            hashMap.put("userName", u.getUserName());
+            hashMap.put("userGender", u.getUserGender());
+            hashMap.put("userBirth", u.getUserBirth());
+            hashMap.put("userTel", u.getUserTel());
+            mapList.add(hashMap);
+
+        }
+        log.info("Test Data000 = {} ", mapList.toString());
+
+        return mapList;
     }
 
     public List<User> serchID(String userId) {

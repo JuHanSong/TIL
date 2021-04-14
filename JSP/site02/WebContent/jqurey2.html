@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script><!--CDN 방식  -->
+<script type="text/javascript">
+	$(function() {
+		$('#b1').click(function() {
+			idValue = $('#id').val()
+			
+			if(idValue.length >= 5){
+				//alert('유효한 아이디')
+				$('div').html('유효한 id 입니다.')
+			}else{
+				//alert('유효하지 않은 아이디')
+				$('div').html('유효하지 않은 id 입니다.')
+			}
+		})
+		
+		$('#pw2').keyup(function() {
+			pw = $('#pw').val()
+			pw2 = $('#pw2').val()
+			
+			if(pw == pw2){
+				//alert('일치하는 아이디')
+				$('div').html('일치하는 아이디')
+			}else{
+				//alert('일치하지 않는 아이디')
+				$('div').html('일치하지 않는 아이디')
+			}		
+		})
+	})
+
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+아이디 길이 체크 : <input id = "id"><br>
+비밀번호 : <input id = "pw"><br>
+비밀번호 확인 : <input id = "pw2"><br>
+<button id ='b1'>아이디 길이확인</button><br>
+<button id ='b2'>비밀번호 동일여부 확인</button>
+<hr>
+<div></div>
+</body>
+</html>

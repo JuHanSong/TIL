@@ -1,14 +1,20 @@
 package com.example.demo.contoller;
 
 import com.example.demo.domain.User;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import jdk.nashorn.internal.ir.debug.JSONWriter;
 import lombok.extern.log4j.Log4j2;
 import com.example.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Log4j2
 @Controller
@@ -17,6 +23,7 @@ public class TestController {
 
     @Autowired
     UserService userService;
+
 
     @RequestMapping(value = "/")
     public String goLoginPage() {
@@ -33,7 +40,7 @@ public class TestController {
     @RequestMapping("goUserManager")
     public String goUserManager(){
         log.info("======= go UserManager =======");
-        return "userManager.html";
+        return "userManager";
     }
     @RequestMapping(value = "goUserBoard")
     public String goUserBoard(){
@@ -86,14 +93,15 @@ public class TestController {
     }
 
     @RequestMapping(value = "serchAllData", method = RequestMethod.GET)
-    public List<User>serchBoard(){
+    public List<HashMap> findAllUsers(){
+        List<HashMap> mapList = userService.serchAllData();
+        log.info("Test Data111 = {} ", mapList.toString());
         log.info("========= serchData =========");
-        log.info("ID : {}");
-        List<User> list = userService.findAllUsers();
-        for(User u : list){
-            log.info(u.getUserId());
+        for(HashMap h : mapList) {
+            log.info("ID : {} Name : {} GENDER : {}Birth : {}TEL : {}", h.get("userId"),h.get("userName"),h.get("userGender"), h.get("userBirth"), h.get("userTel"));
         }
-        log.info("----------------");
-        return list;
+        return mapList;
     }
+
+
 }

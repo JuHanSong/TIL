@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src = "js/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+$(function() {
+	$.ajax({
+		url : "data/news.json",
+		success : function(result) {
+			alert('news 데이터 연결성공')
+			list = result.items
+			// alert(list[0].title)
+			for(i = 0; i < list.length; i ++){
+			console.log(list[i].title + ", " +list[i].pubDate +", " + list[i].link);
+			a = "- <a href = '" + list[i].link + "'>" + list[i].title + '</a>';
+			$('div').append(a + '<br>')
+			}
+			$(list).each(function(index, kisa) {
+				console.log(list[i].title + ", " +list[i].pubDate +", " + list[i].link);
+				a = "- <a href = '" + list[i].link + "'>" + list[i].title + '</a>';
+				$('div').append(a + '<br>')
+			})
+			
+		}
+	})
+})
+</script>
+</head>
+<body>
+<div></div>
+
+</body>
+</html>

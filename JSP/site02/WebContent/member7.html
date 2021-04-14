@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript">
+	function site() {
+		inputVal = document.getElementById("site").value
+		
+		if(inputVal == 'naver'){
+			location.href = 'http://www.naver.com'		
+		}else if (inputVal == 'daum'){
+			location.href = 'http://www.daum.com'	
+		}else if (inputVal == 'google'){
+			location.href = 'http://www.google.com'
+		}else{
+			alert('해당 없음');
+		}
+	}
+</script>
+
+<title>Insert title here</title>
+</head>
+<body>
+
+가고싶은 사이트 입력 : <input id="site"><br>
+<button onclick="site()">사이트로 이동</button>
+
+</body>
+</html>

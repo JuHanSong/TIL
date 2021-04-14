@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript">
+	function check() {// Input에서 입력한 값을 가지고 오는기능.
+	idValue = document.getElementById("id").value
+	pwValue = document.getElementById("pw").value
+	console.log(idValue + " " + pwValue);
+	}
+	
+	function sum(n1, n2) {
+		n1Value = document.getElementById("n1").value
+		n2Value = document.getElementById("n2").value
+		n11 = parseInt(n1Value)
+		n22 = parseInt(n2Value)
+		console.log(n11 + "+" + n22 + "= " + (n11 + n22))
+	}
+
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+아이디 입력 : <input id = id><br>
+패스워드 입력 : <input id = pw><br>	
+<button onclick="check()">로그인</button><br>	
+<hr color="red">
+숫자1 입력 : <input id = n1><br>
+숫자2 입력 : <input id = n2><br>
+<button onclick="sum(n1, n2)">더하기</button>
+	
+</body>
+</html>

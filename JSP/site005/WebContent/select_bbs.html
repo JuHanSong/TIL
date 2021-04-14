@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>select Page</title>
+</head>
+<body>
+ <!-- 코드를 작성하는 순서.
+ 	  1. 클라이언트 요청 
+ 	  2. 서버가 요청을 받아서, DB에서 가지고 온다.
+ 	  3. DB에서 가지고 온다.
+ 	  4. 가지고 온 데이터를(검색결과) 클라이언트에게 응답(html).
+ 	  ------------------------------------------------
+ 	  1. 클라이언트 요청 (조건을 주어서 요청을 하고자 하는경우)
+ 	     1-1. form이용.
+ 	     1-2. a 태그이용.
+ -->
+ <!-- 1.1 form 태그-->
+ <form action="select_bbs.jsp">
+ 검색 아이디 : <input type="text" name="id"><br>
+ <button type="submit">게시판 검색</button>
+ </form>
+ <hr>
+ <!-- 1-2 a태그 검색 -->
+ <a href="select_bbs.jsp?id=1">아이디 1 검색</a>
+ 
+</body>
+</html>
